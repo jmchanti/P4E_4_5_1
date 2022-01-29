@@ -4,9 +4,8 @@
 1. Open `oddAbsolute.py`
 1. Complete the assignment as described in https://canvas.instructure.com/courses/3650963/assignments/25666008?module_item_id=55313407
 3. Note: complete the code inside the calculateAbsolute section.  Each line should be indented between the comments in that file.  For example
-4. Note: There are Two Tests for the Bonus So if you have 2/4 test passing that is OK
 
-calculatePay():
+calculateAbsolute():
     all of the
     code you are writing
     should be indented 4 spaces
