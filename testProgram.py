@@ -4,7 +4,7 @@ from unittest.mock import Mock
 import oddAbsolute
 
 def test_calculateAbsolute_printsABS_lessThan21(capfd, monkeypatch):
-    in_num = randint(-100, 21)*1.0
+    in_num = randint(-100, 21)
     input = [in_num]
     monkeypatch.setattr('builtins.input', lambda _:input.pop())
     oddAbsolute.calculateAbsolute()
@@ -15,12 +15,12 @@ def test_calculateAbsolute_printsABS_lessThan21(capfd, monkeypatch):
 
 
 def test_calculateAbsolute_printsDoubleAbs_greaterThan21(capfd, monkeypatch):
-    in_num = 1.0*randint(21, 200)
+    in_num = randint(21, 200)
     input = [in_num]
     monkeypatch.setattr('builtins.input', lambda _:input.pop())
     oddAbsolute.calculateAbsolute()
 
     out, err = capfd.readouterr()
-    expected = "Result: "+str(abs(2.0*(in_num-21)))+"\n"
+    expected = "Result: "+str(abs(2*(in_num-21)))+"\n"
     print(in_num)
     assert out == expected
